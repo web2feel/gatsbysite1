@@ -11,10 +11,34 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      }   
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts/`,
       },
     },
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve:`gatsby-transformer-remark`,
+      options: {
+          plugins: [
+            `gatsby-remark-relative-images`,
+            {
+              resolve:`gatsby-remark-images`,
+                options: {
+                  maxWidth:760,
+                  linkImagesToOriginal : false,
+
+                }
+            }
+          ]
+      }
+    },
+    
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

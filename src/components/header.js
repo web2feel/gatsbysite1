@@ -27,7 +27,27 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+
     </div>
+    <div 
+      style={{
+        background:`#eee`,
+        padding:`10px 0px`
+      }}>
+        <ul style={{
+          listStyle:`none`,
+          margin:`0px auto`,
+          padding:`0 20px`,
+          maxWidth:`960px`,
+          display:`flex`
+        }}>
+        <li style={{margin:`0 10px`, padding:0}}><Link to="/">Home</Link></li>
+        <li style={{margin:`0 10px`, padding:0}}><Link to="/about">About</Link></li>
+        <li style={{margin:`0 10px`, padding:0}}><Link to="/page-2">Page-2</Link></li>
+        <li style={{margin:`0 10px`, padding:0}}><Link to="/blog">Blog</Link></li>
+        </ul>
+        
+      </div>
   </header>
 )
 
